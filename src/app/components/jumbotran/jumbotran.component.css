@@ -4,5 +4,19 @@
   margin-top: 3%;
 }
 .container{
-  margin-top: 6%;
+  margin-top: 3%;
+}
+.input-group-addon{
+
+  background-color: #fff;
+  width: 15%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.fa-search{
+  padding-top: 10%;
+padding-left: 15%;
+}
+.btn-info{
+  width: 100%;
 }
