@@ -1,8 +1,10 @@
- .navbar-brand {
+ /* .navbar-brand {
   height: 60px;
+} */
+.navbar {
+width: 100%;
 }
-
-.navbar-brand>img {
+/* .navbar-brand>img {
   width: 120px;
   max-height: 100%;
 }
@@ -11,6 +13,5 @@
 
 }
 .active{
-	margin-top: 5px;
 	padding: 1px auto;
-}
+} */
