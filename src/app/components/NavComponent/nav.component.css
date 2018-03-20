@@ -1,0 +1,16 @@
+ .navbar-brand {
+  height: 60px;
+}
+
+.navbar-brand>img {
+  width: 120px;
+  max-height: 100%;
+}
+.navbar-nav>li>a{
+	font-size: 18px;
+
+}
+.active{
+	margin-top: 5px;
+	padding: 1px auto;
+}

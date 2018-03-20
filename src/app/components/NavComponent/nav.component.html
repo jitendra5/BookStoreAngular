@@ -1,0 +1,30 @@
+<nav class="navbar navbar-inverse navbar-fixed-top ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" [routerLink]="['/home']">
+        <i class="glyphicon glyphicon-book"></i>
+        NJ Book Store
+        <!--<img src="assets/images/logo.png" alt="" >-->
+      </a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a [routerLink]="['/home']">Home</a></li>
+      
+      <li><a href="#">Volumes</a></li>
+      <li><a class="dropdown-toggle" data-toggle="dropdown" href="#">Shelves <span class="caret"></span></a>
+         <ul class="dropdown-menu">
+         <li><a href="#">Horror</a></li>
+          <li><a href="#">History</a></li>
+          <li><a href="#">Fiction</a></li>
+          <li><a href="#">IT/Computers</a></li>
+          <li><a href="#">Devotional</a></li>
+          <li><a href="#">Others</a></li>
+        </ul>
+      <li><a [routerLink]="['/contact']">Contact Us</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a [routerLink]="['/signup']"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a [routerLink]="['/login']"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
