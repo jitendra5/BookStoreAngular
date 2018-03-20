@@ -6,13 +6,14 @@ import { AppComponent } from './app.component';
 import {JumbotranComponent} from './components/jumbotran/jumbotran.component';
 import {ContactComponent} from './components/contact/contact.component';
 import {SignupComponent} from './components/signup/signup.component';
+import {VolumesComponent} from './components/volumes/volumes.component';
 
 
 import { routing } from './app.routes';
 
 @NgModule({
   declarations: [
-    AppComponent, NavComponent,LoginComponent,JumbotranComponent, ContactComponent,SignupComponent
+    AppComponent, NavComponent,LoginComponent,VolumesComponent,JumbotranComponent, ContactComponent,SignupComponent
   ],
   imports: [
     BrowserModule, routing
