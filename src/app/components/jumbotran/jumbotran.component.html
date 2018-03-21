@@ -6,10 +6,10 @@
 	</div>
 	<div class="input-group searchtext">
 	  <input class="form-control "
-	         placeholder="Type in the name of the book....">
+	         placeholder="Type in the name of the book...." id='searchStr' [(ngModel)]="searchStr" (keyup)="searchBooks()">
 	  <div class="input-group-addon" >
 			<button type="button" class="btn btn-info">
-			Search<i class="fa fa-search"></i>
+			<span class="text">Search</span><i class="fa fa-search"></i>
 		</button>
 		</div>
 	</div>
