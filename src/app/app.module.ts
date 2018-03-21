@@ -7,8 +7,8 @@ import {JumbotranComponent} from './components/jumbotran/jumbotran.component';
 import {ContactComponent} from './components/contact/contact.component';
 import {SignupComponent} from './components/signup/signup.component';
 import {VolumesComponent} from './components/volumes/volumes.component';
-
-
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import { routing } from './app.routes';
 
 @NgModule({
@@ -16,7 +16,7 @@ import { routing } from './app.routes';
     AppComponent, NavComponent,LoginComponent,VolumesComponent,JumbotranComponent, ContactComponent,SignupComponent
   ],
   imports: [
-    BrowserModule, routing
+    BrowserModule, routing,FormsModule,HttpModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
