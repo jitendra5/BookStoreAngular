@@ -7,13 +7,14 @@ import {JumbotranComponent} from './components/jumbotran/jumbotran.component';
 import {ContactComponent} from './components/contact/contact.component';
 import {SignupComponent} from './components/signup/signup.component';
 import {VolumesComponent} from './components/volumes/volumes.component';
+import {BookComponent} from './components/Book/book.component';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { routing } from './app.routes';
 
 @NgModule({
   declarations: [
-    AppComponent, NavComponent,LoginComponent,VolumesComponent,JumbotranComponent, ContactComponent,SignupComponent
+    AppComponent,BookComponent, NavComponent,LoginComponent,VolumesComponent,JumbotranComponent, ContactComponent,SignupComponent
   ],
   imports: [
     BrowserModule, routing,FormsModule,HttpModule,
