@@ -32,3 +32,12 @@ padding-left: 15%;
     span.fa-search {display:inline-block}
     span.text {display:none}
 }
+.result{
+  top:-18px;
+  width:60%;
+  height:60px;
+  border: 0.5px groove white;
+}
+a, h6,h1{
+  color:#fff;
+}
