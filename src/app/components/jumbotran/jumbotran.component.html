@@ -13,3 +13,14 @@
 		</button>
 		</div>
 	</div>
+	<div class="container" *ngIf='results'>
+		<div *ngFor="let res of results">
+			<div class="row">
+				<div class="col-md-12 bg-dark result">
+						<h6><a href="#">{{res.volumeInfo.title}}</a> <span class="badge badge-pill badge-info">{{res.volumeInfo.publisher}}</span></h6>
+						<span *ngIf="res.volumeInfo.authors?.length<=0"><p class="text-warning">AuthorName Missing</p></span>
+							<p class="text-warning">{{res.volumeInfo.authors}}</p>
+					</div>
+			</div>
+		</div>
+	</div>
