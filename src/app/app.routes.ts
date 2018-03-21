@@ -6,6 +6,7 @@ import {ContactComponent} from './components/contact/contact.component';
 import {SignupComponent} from './components/signup/signup.component';
 import {VolumesComponent} from './components/volumes/volumes.component';
 export const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   {path:'home', component:JumbotranComponent},
   {path:'contact', component:ContactComponent},
