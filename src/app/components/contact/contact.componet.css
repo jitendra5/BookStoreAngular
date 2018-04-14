@@ -1,0 +1,13 @@
+.card{
+	border: 1px solid #fff;
+}
+
+.profile{
+display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container{
+	margin-top:5%;
+}
