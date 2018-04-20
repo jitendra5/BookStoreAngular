@@ -33,10 +33,11 @@ padding-left: 15%;
     span.text {display:none}
 }
 .result{
-  top:-18px;
-  width:60%;
-  height:60px;
-  border: 0.5px groove white;
+  /* top:-18px; */
+  /* width:60%;
+  height:60px; */
+  padding:13px;
+  /* border: 0.5px groove white; */
 }
 a, h6,h1{
   color:#fff;

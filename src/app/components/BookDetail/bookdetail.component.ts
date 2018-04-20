@@ -22,7 +22,7 @@ export class BookComponent implements OnInit{
      this.googleBookService.getBook(this.id)
          .subscribe(book =>{
            this.book= book;
-           console.log("Book get service.");
+           console.log("Book get service. Book Detail component.");
            console.log(book);
          })
    }

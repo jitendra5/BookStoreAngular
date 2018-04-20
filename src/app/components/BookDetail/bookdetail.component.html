@@ -3,25 +3,29 @@
   <div class="row" style="max-width:1000px; margin: auto;">
       <div class="col-xs-5" style="padding:10px;width:300px; height:448px;position: sticky; top:15px;">
 
-       <a data-toggle="modal" data-target="#myModal">  <img src="{{book.volumeInfo.imageLinks.small}}" width="260" height="300" alt="book image"></a>
-      <div id="myModal" class="modal fade" role="dialog">
-          <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="text-center">{{book.volumeInfo.title}}</h5>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <a  data-toggle="modal" data-target="#myModal">  <img src="{{book.volumeInfo.imageLinks.smallThumbnail}}" width="260" height="300" alt="book image"></a>
 
-                  </div>
-                  <div class="modal-body">
-                  <img src="{{book.volumeInfo.imageLinks.small}}" width="260" height="300" alt="book image" style="margin-left: 20%;">
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  </div>
-                </div>
+       <div class="modal " id="myModal" role="dialog">
 
-          </div>
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
       </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+          <!-- <img src="{{book.volumeInfo.imageLinks.smallThumbnail}}" width="260" height="300" alt="book image"> -->
+
+
 
         <div class="container">
           <div class="row buttondiv">
@@ -38,20 +42,20 @@
             <li class="breadcrumb-item active">Books</li>
         </ol>
         <h3 class="bookname">{{book.volumeInfo.title}}</h3>
-        <div class="row" *ngIf='book.volumeInfo.averageRating'>
+        <div class="row" >
           <p>
-            <span class="badge badge-success rating" >{{book.volumeInfo.averageRating}} <i class="fa fa-fw fa-star"></i></span>
+            <span class="badge badge-success rating"  *ngIf='book.volumeInfo?.averageRating'>{{book.volumeInfo.averageRating}} <i class="fa fa-fw fa-star"></i></span>
           </p>
 
         </div>
-        <h5 *ngIf='book.saleInfo.listPrice.amount'> <b style="color:#f6cc49"> Price</b>:<i class="fa fa-inr" style="padding:10px;"></i>  {{book.saleInfo.listPrice.amount}}</h5>
-        <p *ngIf='book.volumeInfo.authors[0]'><b style="color:#f6cc49"> Author</b>: {{book.volumeInfo.authors[0]}}</p>
-        <p ><b style="color:#f6cc49"> Sub-title</b>: {{book.volumeInfo.subtitle}}</p>
-        <p><b style="color:#f6cc49"> Category</b>: {{book.volumeInfo.categories[0]}}</p>
-        <p><b style="color:#f6cc49"> Pages</b>: {{book.volumeInfo.pageCount}}</p>
-        <p><b style="color:#f6cc49"> Publisher</b>:{{book.volumeInfo.publishedDate}}</p>
-        <p><b style="color:#f6cc49"> Published Date</b>: {{book.volumeInfo.publishedDate}}</p>
-        <p><b style="color:#f6cc49"> Description</b>: {{book.volumeInfo.description | striphtml }}</p>
+        <h5 *ngIf="book.saleInfo.listPrice?.amount"> <b style="color:#f6cc49"> Price</b>:<i class="fa fa-inr" style="padding:10px;"></i>  {{book.saleInfo.listPrice.amount}}</h5>
+        <p *ngIf='book.volumeInfo?.authors'><b style="color:#f6cc49"> Author</b>: {{book.volumeInfo.authors[0]}}</p>
+        <p *ngIf='book.volumeInfo?.subtitle'><b style="color:#f6cc49"> Sub-title</b>: {{book.volumeInfo.subtitle}}</p>
+        <p *ngIf='book.volumeInfo?.categories'><b style="color:#f6cc49"> Category</b>: {{book.volumeInfo.categories[0]}}</p>
+        <p *ngIf='book.volumeInfo?.pageCount'><b style="color:#f6cc49"> Pages</b>: {{book.volumeInfo.pageCount}}</p>
+        <p  *ngIf='book.volumeInfo?.publisher'><b style="color:#f6cc49"> Publisher</b>:{{book.volumeInfo.publisher}}</p>
+        <p *ngIf='book.volumeInfo?.publishedDate'><b style="color:#f6cc49"> Published Date</b>: {{book.volumeInfo.publishedDate}}</p>
+        <p *ngIf='book.volumeInfo?.description'><b style="color:#f6cc49"> Description</b>: {{book.volumeInfo.description | striphtml }}</p>
       </div>
 
   </div>

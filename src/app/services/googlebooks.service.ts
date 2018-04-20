@@ -11,7 +11,7 @@ export class GoogleBookService{
   }
 
   searchBook(str:string){
-    this.searchUrl= "https://www.googleapis.com/books/v1/volumes?q="+str+"&offset=0&limit=20";
+    this.searchUrl= "https://www.googleapis.com/books/v1/volumes?q="+str+"&offset=0";
     return this.http.get(this.searchUrl)
     .map(res =>res.json());
 
