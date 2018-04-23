@@ -6,6 +6,7 @@ import 'rxjs/add/operator/map';
 export class GoogleBookService{
   private searchUrl: string;
   private bookUrl:string;
+  private catUrl:string;
   constructor(private http:Http){
 
   }
@@ -22,5 +23,11 @@ export class GoogleBookService{
     return this.http.get(this.bookUrl)
     .map(res =>res.json());
 
+  }
+  searchShelf(cat:string){
+    console.log("categoryInService:"+cat);
+    this.catUrl= "https://www.googleapis.com/books/v1/volumes?q=subject:"+cat;
+    return this.http.get(this.catUrl)
+    .map(res =>res.json());
   }
 }

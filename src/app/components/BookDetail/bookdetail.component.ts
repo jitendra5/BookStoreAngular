@@ -12,7 +12,7 @@ export class BookComponent implements OnInit{
   id: string;
   book: Book[];
   constructor(private googleBookService:GoogleBookService, private route:ActivatedRoute){
-
+            
   }
 
   ngOnInit() {

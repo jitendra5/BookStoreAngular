@@ -15,6 +15,7 @@ export const routes: Routes = [
   {path:'signup', component:SignupComponent},
   {path:'volumes', component:VolumesComponent},
   {path:'book/:id', component:BookComponent},
+  {path:'shelf/:cat', component:JumbotranComponent},
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes);

@@ -14,14 +14,14 @@
 
       <li class="nav-item"><a class="nav-link" [routerLink]="['/volumes']">Volumes</a></li>
       <li class="nav-item dropdown" >
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shelves</a>
+        <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shelves</a>
          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-         <a class="dropdown-item" href="#">Horror</a>
-          <a class="dropdown-item" href="#">History</a>
-          <a class="dropdown-item" href="#">Fiction</a>
-          <a class="dropdown-item" href="#">IT/Computers</a>
-          <a class="dropdown-item" href="#">Devotional</a>
-          <a class="dropdown-item" href="#">Others</a>
+         <a class="dropdown-item" [routerLink]="['shelf/Horror']">Horror</a>
+          <a class="dropdown-item"  [routerLink]="['shelf/History']">History</a>
+          <a class="dropdown-item"  [routerLink]="['shelf/Fiction']">Fiction</a>
+          <a class="dropdown-item" [routerLink]="['shelf/Computers']">IT/Computers</a>
+          <a class="dropdown-item" [routerLink]="['shelf/Devotional']">Devotional</a>
+
         </div>
       <li><a class="nav-link" [routerLink]="['/contact']"><i class="fa fa-handshake-o" style="font-size:20px"></i>Contact Us</a></li>
     </ul>
@@ -29,5 +29,6 @@
       <li><a class="nav-link" [routerLink]="['/signup']"><i class="fa fa-address-book" style="font-size:20px"></i> Sign Up</a></li>
       <li><a class="nav-link" [routerLink]="['/login']"><i class="fa fa-user" style="font-size:20px"></i> Login</a></li>
     </ul>
+
 </div>
 </nav>

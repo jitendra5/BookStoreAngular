@@ -15,11 +15,11 @@ import { HttpClientModule } from '@angular/common/http';
 import {GoogleBookService} from './services/googlebooks.service';
 import {FooterComponent} from './components/Footer/footer.component';
 import {StripHtmlPipe} from './striphtml.pipe';
-
+import { ShelfComponent } from './components/shelves/shelf.component';
 @NgModule({
   declarations: [
     AppComponent,BookComponent, NavComponent,LoginComponent,VolumesComponent,JumbotranComponent, ContactComponent,SignupComponent,
-    FooterComponent,StripHtmlPipe,
+    FooterComponent,StripHtmlPipe,ShelfComponent,
   ],
   imports: [
     BrowserModule, routing,FormsModule,HttpModule,HttpClientModule,

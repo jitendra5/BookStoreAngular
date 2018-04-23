@@ -1,3 +1,6 @@
+<div *ngIf='category'>
+
+</div>
 <div class="container">
 	<div class="row">
 
@@ -28,7 +31,7 @@ The Greek philosopher Plato lamented the loss of knowledge because the media of 
 	<div class="container" *ngIf='results'>
 		<div class="row" style="border: 1px solid #fff;">
 		<div *ngFor="let res of results">
-			<span *ngIf='res.volumeInfo.imageLinks.thumbnail.length>=0'>
+			<span *ngIf='res.volumeInfo.imageLinks?.thumbnail'>
 				<div class="result">
 					<div class="card" style="width:200px;">
 				    <img class="img-fluid profile" src="{{res.volumeInfo.imageLinks.thumbnail}}" alt="Card image">
