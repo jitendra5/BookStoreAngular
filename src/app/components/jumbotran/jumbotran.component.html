@@ -1,6 +1,33 @@
 <div *ngIf='category'>
+	<div class="row">
 
+
+	<div class="container" *ngIf='results'>
+		<div class="row" style="border: 1px solid #fff;">
+		<div *ngFor="let res of results">
+			<span *ngIf='res.volumeInfo.imageLinks?.thumbnail'>
+				<div class="result">
+					<div class="card" style="width:200px;">
+				    <img class="img-fluid profile" src="{{res.volumeInfo.imageLinks.thumbnail}}" alt="Card image">
+				    <div class="card-body">
+							<a routerLink='/book/{{res.id}}' style="color: #000;">{{res.volumeInfo.title}}</a>
+							<span *ngIf="res.volumeInfo.averageRating?.length>0" class="badge badge-pill badge-info" >{{res.volumeInfo.averageRating}}<i class="fa fa-fw fa-star"></i></span>
+	 						<span *ngIf="res.volumeInfo.authors?.length>0"><p class="text-warning">{{res.volumeInfo.authors[0]}}</p></span>
+				     <span *ngIf="res.saleInfo.listPrice?.length>0" style="color: #000;"><i class="fa fa-inr"></i>  {{res.saleInfo.listPrice.amount}}</span>
+
+				    </div>
+				  </div>
+
+					</div>
+					</span>
+			</div>
+		</div>
+	</div>
+	</div>
 </div>
+<div *ngIf='!category' >
+
+
 <div class="container">
 	<div class="row">
 
@@ -36,7 +63,7 @@ The Greek philosopher Plato lamented the loss of knowledge because the media of 
 					<div class="card" style="width:200px;">
 				    <img class="img-fluid profile" src="{{res.volumeInfo.imageLinks.thumbnail}}" alt="Card image">
 				    <div class="card-body">
-							<a routerLink='/book/{{res.id}}' style="color: #000;">{{res.volumeInfo.title.substring(0,15)}}</a>
+							<a routerLink='/book/{{res.id}}' style="color: #000;">{{res.volumeInfo.title.substring(0,25)}}</a>
 							<span *ngIf="res.volumeInfo.averageRating?.length>0" class="badge badge-pill badge-info" >{{res.volumeInfo.averageRating}}<i class="fa fa-fw fa-star"></i></span>
 	 						<span *ngIf="res.volumeInfo.authors?.length>0"><p class="text-warning">{{res.volumeInfo.authors[0]}}</p></span>
 				     <span *ngIf="res.saleInfo.listPrice?.length>0" style="color: #000;"><i class="fa fa-inr"></i>  {{res.saleInfo.listPrice.amount}}</span>
@@ -50,3 +77,4 @@ The Greek philosopher Plato lamented the loss of knowledge because the media of 
 		</div>
 	</div>
 	</div>
+</div>

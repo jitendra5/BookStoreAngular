@@ -61,6 +61,31 @@
   <div class="container">
     <div class="row" style="border: 1px solid #fff;">
       <p><b style="color:#f6cc49"> Similar Books you may be interested in</b></p>
+
+
+
+      	<div class="container" *ngIf='results'>
+      		<div class="row" style="border: 1px solid #fff;">
+      		<div *ngFor="let res of results | slice:5:10">
+      			<span *ngIf='res.volumeInfo.imageLinks?.thumbnail'>
+      				<div class="result">
+      					<div class="card" style="width:200px;margin: 12px;">
+      				    <img class="img-fluid profile" src="{{res.volumeInfo.imageLinks.thumbnail}}" alt="Card image">
+      				    <div class="card-body">
+      							<a routerLink='/book/{{res.id}}' style="color: #000;">{{res.volumeInfo.title}}</a>
+      							<span *ngIf="res.volumeInfo.averageRating?.length>0" class="badge badge-pill badge-info" >{{res.volumeInfo.averageRating}}<i class="fa fa-fw fa-star"></i></span>
+      	 						<span *ngIf="res.volumeInfo.authors?.length>0"><p class="text-warning">{{res.volumeInfo.authors[0]}}</p></span>
+      				     <span *ngIf="res.saleInfo.listPrice?.length>0" style="color: #000;"><i class="fa fa-inr"></i>  {{res.saleInfo.listPrice.amount}}</span>
+
+      				    </div>
+      				  </div>
+
+      					</div>
+      					</span>
+      			</div>
+      		</div>
+      	</div>
+
     </div>
   </div>
 

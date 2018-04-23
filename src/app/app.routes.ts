@@ -9,6 +9,7 @@ import {BookComponent} from './components/BookDetail/bookdetail.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'shelf', redirectTo: '/home', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   {path:'home', component:JumbotranComponent},
   {path:'contact', component:ContactComponent},

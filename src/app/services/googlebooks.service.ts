@@ -12,6 +12,7 @@ export class GoogleBookService{
   }
 
   searchBook(str:string){
+    console.log("AAAAAA:"+str);
     this.searchUrl= "https://www.googleapis.com/books/v1/volumes?q="+str+"&offset=0";
     return this.http.get(this.searchUrl)
     .map(res =>res.json());
