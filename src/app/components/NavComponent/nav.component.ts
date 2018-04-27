@@ -1,5 +1,6 @@
 import { Component, Input, HostListener } from '@angular/core';
 import { ShelfComponent } from '../shelves/shelf.component';
+import {Auth} from '../../services/auth.services';
 @Component({
   selector: 'navbar',
   templateUrl: './nav.component.html',
@@ -9,7 +10,7 @@ export class NavComponent {
   shelfSelected: boolean;
   message:string;
   parentMessage : string;
-   constructor(){
+   constructor(private auth:Auth){
        this.shelfSelected = false;
    }
 

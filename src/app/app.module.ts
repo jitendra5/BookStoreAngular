@@ -16,6 +16,8 @@ import {GoogleBookService} from './services/googlebooks.service';
 import {FooterComponent} from './components/Footer/footer.component';
 import {StripHtmlPipe} from './striphtml.pipe';
 import { ShelfComponent } from './components/shelves/shelf.component';
+import {AUTH_PROVIDERS} from 'angular2-jwt';
+import {Auth} from './services/auth.services';
 @NgModule({
   declarations: [
     AppComponent,BookComponent, NavComponent,LoginComponent,VolumesComponent,JumbotranComponent, ContactComponent,SignupComponent,
@@ -24,7 +26,7 @@ import { ShelfComponent } from './components/shelves/shelf.component';
   imports: [
     BrowserModule, routing,FormsModule,HttpModule,HttpClientModule,
   ],
-  providers: [GoogleBookService],
+  providers: [GoogleBookService,Auth,AUTH_PROVIDERS],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

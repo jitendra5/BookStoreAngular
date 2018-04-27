@@ -26,8 +26,10 @@
       <li><a class="nav-link" [routerLink]="['/contact']"><i class="fa fa-handshake-o" style="font-size:20px"></i>Contact Us</a></li>
     </ul>
     <ul class="nav navbar-nav ml-auto">
-      <li><a class="nav-link" [routerLink]="['/signup']"><i class="fa fa-address-book" style="font-size:20px"></i> Sign Up</a></li>
-      <li><a class="nav-link" [routerLink]="['/login']"><i class="fa fa-user" style="font-size:20px"></i> Login</a></li>
+
+      <li style="cursor:pointer;"><a class="nav-link" (click)='auth.login()' *ngIf='!auth.authenticated'><i class="fa fa-user" style="font-size:20px"></i> Login</a></li>
+      <li style="cursor:pointer;"><a class="nav-link" *ngIf='auth.authenticated'><i class="fa fa-user" style="font-size:20px"></i> Profile</a></li>
+      <li style="cursor:pointer;"><a class="nav-link" (click)='auth.logout()' *ngIf='auth.authenticated'><i class="fa fa-user" style="font-size:20px"></i> Logout</a></li>
     </ul>
 
 </div>

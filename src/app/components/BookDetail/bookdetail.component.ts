@@ -28,7 +28,7 @@ export class BookComponent implements OnInit{
              this.results=res.items;
            console.log("Book get service. Book Detail component.");
            console.log(book);
-         })
+         });
    }
 
    this.route.url.subscribe(url =>{
