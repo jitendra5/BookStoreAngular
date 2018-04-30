@@ -28,20 +28,73 @@
 <div *ngIf='!category' >
 
 
-<div class="container">
-	<div class="row">
 
 
-	<div class="jumbotran">
-		<h1>Welcome to RJ book store</h1>
-		<h5>The history of textbooks dates back to civilizations of ancient history. For example, Ancient Greeks wrote texts intended for education. The modern textbook has its roots in the standardization made possible by the printing press. Johannes Gutenberg himself may have printed editions of Ars Minor, a schoolbook on Latin grammar by Aelius Donatus. Early textbooks were used by tutors and teachers, who used the books as instructional aids, as well as individuals who taught themselves.
-The Greek philosopher Plato lamented the loss of knowledge because the media of transmission were changing. Before the invention of the Greek alphabet 2,500 years ago, knowledge and stories were recited aloud, much like Homer's epic poems. The new technology of writing meant stories no longer needed to be memorized, a development Socrates feared would weaken the Greeks' mental capacities for memorizing and retelling. (Ironically, we know about Socrates' concerns only because they were written down by his student Plato in his famous Dialogues. </h5>
-	</div>
-	</div>
-	</div>
-	<div class="row">
+
+		<div id="demo" class="carousel slide" data-ride="carousel">
+
+		  <!-- Indicators -->
+		  <ul class="carousel-indicators">
+		    <li data-target="#demo" data-slide-to="0" class="active"></li>
+		    <li data-target="#demo" data-slide-to="1"></li>
+		    <li data-target="#demo" data-slide-to="2"></li>
+				<li data-target="#demo" data-slide-to="3"></li>
+		    <li data-target="#demo" data-slide-to="4"></li>
+		  </ul>
+
+		  <!-- The slideshow -->
+		  <div class="carousel-inner">
+		    <div class="carousel-item active">
+					<img src="./assets/images/book31.jpg" alt="Book1"  class="img-fluid">
+					<div class="carousel-caption d-none d-md-block">
+			    <h3>All Harry Potter Collections</h3>
+			    <p>Hurry Up!!</p>
+			  </div>
+		    </div>
+		    <div class="carousel-item">
+		      <img src="./assets/images/book33.jpg" alt="Book2" class="img-fluid">
+					<div class="carousel-caption d-none d-md-block">
+			    <h3 class="text-align">Devotional Collections</h3>
+			    <p>Go develotional!!</p>
+			  </div>
+		    </div>
+		    <div class="carousel-item">
+		      <img src="./assets/images/book5.jpg" alt="Book3" class="img-fluid">
+					<div class="carousel-caption d-none d-md-block">
+			    <h3>Old books Collections</h3>
+			    <p>Vitage Collections!!</p>
+			  </div>
+		    </div>
+				<div class="carousel-item">
+		      <img src="./assets/images/book7.jpg" alt="Math" class="img-fluid">
+					<div class="carousel-caption d-none d-md-block">
+			    <h3>Mathematics</h3>
+			    <p>All volumes!!</p>
+			  </div>
+		    </div>
+				<div class="carousel-item">
+		      <img src="./assets/images/book4.jpg" alt="IT" class="img-fluid">
+					<div class="carousel-caption d-none d-md-block">
+			    <h3>IT Books</h3>
+			    <p> Be a Geek!!</p>
+			  </div>
+		    </div>
+		  </div>
+
+		  <!-- Left and right controls -->
+		  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+		    <span class="carousel-control-prev-icon"></span>
+		  </a>
+		  <a class="carousel-control-next" href="#demo" data-slide="next">
+		    <span class="carousel-control-next-icon"></span>
+		  </a>
+
+		</div>
+
+	<!-- </div><!--jumbo-->
 
 
+	<div class="row searchbox">
 	<div class="input-group searchtext">
 	  <input class="form-control "
 	         placeholder="Type in the name of the book...." id='searchStr' [(ngModel)]="searchStr" (keyup)="searchBooks()">
@@ -52,9 +105,8 @@ The Greek philosopher Plato lamented the loss of knowledge because the media of 
 		</div>
 	</div>
 	</div>
+
 	<div class="row">
-
-
 	<div class="container" *ngIf='results'>
 		<div class="row" style="border: 1px solid #fff;">
 		<div *ngFor="let res of results">
@@ -77,4 +129,56 @@ The Greek philosopher Plato lamented the loss of knowledge because the media of 
 		</div>
 	</div>
 	</div>
+
+	<div class="popbooks">
+
+	<h3 class="text-center" style="color:#fff;">Popular Books</h3>
+	<div class="row">
+
+	<div class="col-sm">
+		<div class="container popimg">
+				<img src="./assets/images/book4.jpg" alt="Avatar" class="image">
+				<div class="overlay">
+				<div class="text"> <a href="#">Hello World</a> </div>
+				</div>
+		</div>
+	</div>
+	<div class="col-sm">
+		<div class="container popimg">
+			<img src="./assets/images/book2.jpg" alt="Avatar" class="image">
+			<div class="overlay">
+				<div class="text"><a href="#">Hello World</a></div>
+			</div>
+		</div>
+
+	</div>
+	<div class="col-sm">
+		<div class="container popimg">
+			<img src="./assets/images/book3.jpg" alt="Avatar" class="image">
+			<div class="overlay">
+				<div class="text"><a href="#">Hello World</a></div>
+			</div>
+		</div>
+
+	</div>
+	<div class="col-sm">
+		<div class="container popimg">
+			<img src="./assets/images/book1.jpg" alt="Avatar" class="image">
+			<div class="overlay">
+				<div class="text"><a href="#">Harry Potter</a></div>
+			</div>
+		</div>
+
+	</div>
+	<div class="col-sm">
+		<div class="container popimg">
+			<img src="./assets/images/book8.jpg" alt="Avatar" class="image">
+			<div class="overlay">
+				<div class="text"><a href="#">Hello World</a></div>
+			</div>
+		</div>
+
+	</div>
+
+</div>
 </div>

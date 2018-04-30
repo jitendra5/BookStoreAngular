@@ -3,5 +3,7 @@ footer {
 
   margin:0 auto;
     width: 100%;
+    background-color: #fff;
+    height: 250px;
     /* overflow: hidden; */
 }

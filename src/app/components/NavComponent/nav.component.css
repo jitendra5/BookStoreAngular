@@ -3,6 +3,9 @@
 } */
 .navbar {
 width: 100%;
+  top: 0;
+position: fixed;
+z-index: 500;
 }
 /* .navbar-brand>img {
   width: 120px;

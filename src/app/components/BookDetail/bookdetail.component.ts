@@ -19,7 +19,7 @@ export class BookComponent implements OnInit{
     this.route.params.subscribe(params => {
         this.id = params['id'];
      })=>{
-     googleBookService.getBook(this.id)
+     this.googleBookService.getBook(this.id)
          .subscribe(book =>{
            this.book= book;
            this.searchTitle=book.volumeInfo.title;
