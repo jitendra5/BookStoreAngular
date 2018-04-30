@@ -27,9 +27,9 @@
     </ul>
     <ul class="nav navbar-nav ml-auto">
 
-      <li style="cursor:pointer;"><a class="nav-link" (click)='auth.login()' *ngIf='!auth.authenticated'><i class="fa fa-user" style="font-size:20px"></i> Login</a></li>
-      <li style="cursor:pointer;"><a class="nav-link" *ngIf='auth.authenticated'><i class="fa fa-user" style="font-size:20px"></i> Profile</a></li>
-      <li style="cursor:pointer;"><a class="nav-link" (click)='auth.logout()' *ngIf='auth.authenticated'><i class="fa fa-user" style="font-size:20px"></i> Logout</a></li>
+      <li style="cursor:pointer;"><a class="nav-link" *ngIf="!auth.isAuthenticated()" (click)="auth.login()"><i class="fa fa-sign-in" style="font-size:20px"></i> Login</a></li>
+      <li style="cursor:pointer;"><a class="nav-link" [routerLink]="['/profile']" *ngIf="auth.isAuthenticated()"><i class="fa fa-user" style="font-size:20px"></i> Profile</a></li>
+      <li style="cursor:pointer;"><a class="nav-link" *ngIf="auth.isAuthenticated()" (click)="auth.logout()"><i class="fa fa-sign-out" style="font-size:20px"></i> Logout</a></li>
     </ul>
 
 </div>
