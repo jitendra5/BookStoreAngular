@@ -15,6 +15,7 @@ export class BookComponent implements OnInit{
   book: Book[];
   searchTitle: string;
   results:Book[];
+
   constructor(private googleBookService:GoogleBookService, private route:ActivatedRoute){
     this.route.params.subscribe(params => {
         this.id = params['id'];

@@ -13,7 +13,6 @@ export class JumbotranComponent {
   searchStr:string;
   results:Book[];
   category:string;
-
   constructor(private googleBookService:GoogleBookService,private route:ActivatedRoute){
 }
 ngOnInit() {
