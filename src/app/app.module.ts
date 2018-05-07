@@ -1,11 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {NavComponent} from './components/NavComponent/nav.component';
-
 import { AppComponent } from './app.component';
 import {JumbotranComponent} from './components/jumbotran/jumbotran.component';
 import {ContactComponent} from './components/contact/contact.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {VolumesComponent} from './components/volumes/volumes.component';
 import {BookComponent} from './components/BookDetail/bookdetail.component';
 import { FormsModule } from '@angular/forms';
@@ -26,7 +25,7 @@ import { ClickOutsideDirective } from './click-outside.directive';
     FooterComponent,StripHtmlPipe,ShelfComponent,ProfileComponent, ClickOutsideDirective
   ],
   imports: [
-    BrowserModule, routing,FormsModule,HttpModule,HttpClientModule,
+    BrowserModule, routing,FormsModule,HttpModule,HttpClientModule,BrowserAnimationsModule
   ],
   providers: [GoogleBookService,Auth,AUTH_PROVIDERS],
   bootstrap: [AppComponent]

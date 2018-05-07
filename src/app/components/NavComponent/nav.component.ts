@@ -25,7 +25,10 @@ export class NavComponent implements OnInit {
     this.parentMessage = $event.srcElement.attributes.id;
   }
   scrollWin(x) {
-    window.scrollTo({ left: 0, top: x, behavior: 'smooth' });
+    if(window.location.pathname.includes('/home')){
+
+      window.scrollTo({ left: 0, top: x, behavior: 'smooth' });
+    }
   }
   ngOnInit() {
     if (this.auth.userProfile) {

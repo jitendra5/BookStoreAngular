@@ -128,3 +128,6 @@ max-width: 100%;
 .lightbox-target:target a.lightbox-close {
 top: 0px;
 }
+.simil{
+  margin: 10px auto;
+}
