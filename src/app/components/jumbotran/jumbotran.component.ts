@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,OnInit,ElementRef } from '@angular/core';
 import {GoogleBookService} from '../../services/googlebooks.service';
 import {Book} from '../../../Book';
 import {ActivatedRoute} from '@angular/router';
@@ -10,10 +10,13 @@ import {ActivatedRoute} from '@angular/router';
 
 })
 export class JumbotranComponent {
+  showDropDown=false;
   searchStr:string;
   results:Book[];
   category:string;
-  constructor(private googleBookService:GoogleBookService,private route:ActivatedRoute){
+  public elementRef;
+  constructor(private googleBookService:GoogleBookService,private route:ActivatedRoute,myElement: ElementRef){
+    this.elementRef = myElement;
 }
 ngOnInit() {
   this.route.params.subscribe(params => {
@@ -29,10 +32,20 @@ ngOnInit() {
 }
 }
   searchBooks(){
+    if(this.searchStr.length>0){
+      this.showDropDown=true;
     this.googleBookService.searchBook(this.searchStr)
     .subscribe(res=>{
       this.results=res.items;
       console.log(res.items);
     });
+    }
+    else{
+      this.showDropDown=false;
+    }
+    
+  }
+  toggleDropDown(){
+    this.showDropDown=!this.showDropDown;
   }
 }

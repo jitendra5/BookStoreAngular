@@ -19,10 +19,11 @@ import {StripHtmlPipe} from './striphtml.pipe';
 import { ShelfComponent } from './components/shelves/shelf.component';
 import {AUTH_PROVIDERS} from 'angular2-jwt';
 import {Auth} from './services/auth.services';
+import { ClickOutsideDirective } from './click-outside.directive';
 @NgModule({
   declarations: [
     AppComponent,BookComponent, NavComponent,VolumesComponent,JumbotranComponent, ContactComponent,
-    FooterComponent,StripHtmlPipe,ShelfComponent,ProfileComponent
+    FooterComponent,StripHtmlPipe,ShelfComponent,ProfileComponent, ClickOutsideDirective
   ],
   imports: [
     BrowserModule, routing,FormsModule,HttpModule,HttpClientModule,

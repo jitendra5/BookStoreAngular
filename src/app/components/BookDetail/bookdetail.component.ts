@@ -19,7 +19,8 @@ export class BookComponent implements OnInit{
   constructor(private googleBookService:GoogleBookService, private route:ActivatedRoute){
     this.route.params.subscribe(params => {
         this.id = params['id'];
-     })=>{
+     })
+     
      this.googleBookService.getBook(this.id)
          .subscribe(book =>{
            this.book= book;
@@ -32,10 +33,13 @@ export class BookComponent implements OnInit{
          });
    }
 
-   route.url.subscribe(url =>{
+   this.route.url.subscribe(url =>{
         console.log(url[1].path);
    });
 
+
 }
+ngOnInit() {
+   
 }
 }
